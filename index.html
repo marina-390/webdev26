@@ -3,13 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+
     <title>Basics of Web Development</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Basics of Web Development</h1>
-    <ul>
-        <li><a href="a1/">A1</a></li>
-        <li><a href="s2/">S2</a></li>
-    </ul>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="assignments">
+            <div class="container">
+
+                <h1>Basics of Web Development</h1>
+
+                <p class="intro">
+                    Assignments from the course.
+                </p>
+
+                <ul class="cards">
+
+                    <li>
+                        <a class="card" href="a1/">
+                            <h2>A1</h2>
+                            <p>HTML and CSS in separate files</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="card" href="s2/">
+                            <h2>S2</h2>
+                            <p>Course start page with internal CSS</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="card" href="s3/">
+                            <h2>S3</h2>
+                            <p>Lists, separate CSS and Live Server</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Centria Edu</p>
+        </div>
+    </footer>
+
 </body>
 </html>

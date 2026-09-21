@@ -1,0 +1,130 @@
+:root {
+    --primary: #e10e49;
+    --light: #ffffff;
+    --dark: #1e1e1e;
+    --blue: #263f6a;
+    --green: #284e36;
+    --orange: #e37222;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.assignments {
+    padding: 4rem 0;
+    background-color: #f7f7f7;
+}
+
+.assignments h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro {
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.card {
+    display: block;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--light);
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: var(--dark);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-bottom: 0.4rem;
+}
+
+.card p {
+    color: #555;
+}
+
+.cards li:nth-child(1) .card {
+    border-top: 4px solid var(--blue);
+}
+
+.cards li:nth-child(1) .card h2 {
+    color: var(--blue);
+}
+
+.cards li:nth-child(2) .card {
+    border-top: 4px solid var(--green);
+}
+
+.cards li:nth-child(2) .card h2 {
+    color: var(--green);
+}
+
+.cards li:nth-child(3) .card {
+    border-top: 4px solid var(--orange);
+}
+
+.cards li:nth-child(3) .card h2 {
+    color: var(--orange);
+}
+
+footer {
+    padding: 2rem 0;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
