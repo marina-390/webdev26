@@ -1,0 +1,153 @@
+/* Maryna Yehereva */
+
+/* Colours:
+   dark blue-grey  #2b3a4a  header, footer, headings
+   ice blue        #a9c6de  borders, accents
+   off-white       #f7f5f0  page background
+*/
+
+/* Page */
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f7f5f0;
+}
+
+h2 {
+  color: #2b3a4a;
+  font-size: 1.8em;
+  margin-top: 0;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #a9c6de;
+}
+
+/* Header */
+header {
+  background-color: #2b3a4a;
+  color: #f7f5f0;
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.portrait {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 5px solid #a9c6de;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  display: inline-block;
+  margin: 15px 0 25px;
+  padding: 6px 18px;
+  background-color: #a9c6de;
+  color: #2b3a4a;
+  border-radius: 20px;
+  font-style: italic;
+}
+
+/* Navigation */
+nav a {
+  color: #f7f5f0;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background-color: #3d5068;
+}
+
+nav a.active {
+  background-color: #a9c6de;
+  color: #2b3a4a;
+}
+
+/* Content column */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Photo + text side by side */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+figure {
+  margin: 0;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  border: 4px solid #a9c6de;
+}
+
+figcaption {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #666666;
+  margin-top: 8px;
+}
+
+/* Link to the gallery */
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 22px;
+  background-color: #2b3a4a;
+  color: #f7f5f0;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: #3d5068;
+}
+
+/* Gallery: 2 photos per row */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background-color: #2b3a4a;
+  color: #a9c6de;
+  text-align: center;
+  padding: 20px;
+}
