@@ -1,7 +1,9 @@
 :root {
     --primary: #e10e49;
     --light: #ffffff;
+    --background: #f7f7f7;
     --dark: #1e1e1e;
+    --muted: #555;
     --blue: #263f6a;
     --green: #284e36;
     --orange: #e37222;
@@ -15,13 +17,9 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--light);
+    background-color: var(--background);
     color: var(--dark);
     line-height: 1.6;
-}
-
-header {
-    border-bottom: 1px solid #e5e5e5;
 }
 
 .container {
@@ -29,36 +27,54 @@ header {
     margin: 0 auto;
 }
 
-nav {
-    min-height: 72px;
-    display: flex;
-    align-items: center;
+/* Header */
+
+header {
+    padding: 2rem 0 3rem;
+    background-color: var(--blue);
+    color: var(--light);
 }
 
 .logo {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: var(--dark);
+    margin-bottom: 2rem;
 }
 
 .logo span {
     color: var(--primary);
 }
 
-.assignments {
-    padding: 4rem 0;
-    background-color: #f7f7f7;
+header h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
 }
 
-.assignments h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.author {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
 }
 
 .intro {
-    color: #555;
-    margin-bottom: 2rem;
+    max-width: 650px;
+    color: #dde3ec;
 }
+
+/* Assignment sections */
+
+.assignments {
+    padding: 3rem 0 1rem;
+}
+
+.assignments h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.75rem;
+    border-left: 5px solid var(--primary);
+}
+
+/* Card grid */
 
 .cards {
     display: grid;
@@ -68,63 +84,86 @@ nav {
 }
 
 .card {
-    display: block;
-    height: 100%;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
     background-color: var(--light);
     border: 1px solid #e5e5e5;
+    border-top: 4px solid var(--blue);
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    text-decoration: none;
-    color: var(--dark);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.card h2 {
-    margin-bottom: 0.4rem;
+.card h3 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
 }
 
 .card p {
-    color: #555;
+    color: var(--muted);
+    margin-bottom: 1rem;
 }
 
-.cards li:nth-child(1) .card {
-    border-top: 4px solid var(--blue);
+.card a {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--light);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
 }
 
-.cards li:nth-child(1) .card h2 {
-    color: var(--blue);
+.card a:hover {
+    background-color: var(--dark);
 }
 
-.cards li:nth-child(2) .card {
-    border-top: 4px solid var(--green);
+.cards li:nth-child(2) {
+    border-top-color: var(--green);
 }
 
-.cards li:nth-child(2) .card h2 {
+.cards li:nth-child(2) h3 {
     color: var(--green);
 }
 
-.cards li:nth-child(3) .card {
-    border-top: 4px solid var(--orange);
+.cards li:nth-child(3) {
+    border-top-color: var(--orange);
 }
 
-.cards li:nth-child(3) .card h2 {
+.cards li:nth-child(3) h3 {
     color: var(--orange);
 }
 
+/* Footer */
+
 footer {
+    margin-top: 3rem;
     padding: 2rem 0;
     background-color: var(--dark);
     color: var(--light);
 }
 
-@media (max-width: 700px) {
+/* Responsive layout */
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
     .cards {
         grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
     }
 }
