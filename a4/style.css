@@ -132,6 +132,7 @@ figcaption {
   background-color: #3d5068;
 }
 
+/* Layout: 3-column card grid, 1 column under 700px */
 /* Gallery: 3 photos per row */
 .gallery {
   display: grid;
