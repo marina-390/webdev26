@@ -125,19 +125,21 @@ header h1 {
     background-color: var(--dark);
 }
 
-.cards li:nth-child(2) {
+/* Colors repeat every three cards: blue, green, orange */
+
+.cards li:nth-child(3n + 2) {
     border-top-color: var(--green);
 }
 
-.cards li:nth-child(2) h3 {
+.cards li:nth-child(3n + 2) h3 {
     color: var(--green);
 }
 
-.cards li:nth-child(3) {
+.cards li:nth-child(3n) {
     border-top-color: var(--orange);
 }
 
-.cards li:nth-child(3) h3 {
+.cards li:nth-child(3n) h3 {
     color: var(--orange);
 }
 
